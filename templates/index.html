@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %} 
+<div class="content">
+    <h1>Tasks Of The Day</h1>
+    {% if tasks|length < 1 %}
+    <h4>There are no tasks!</h4>
+
+    {% else %}
+    <table>
+        <str>
+            <th>Patient's Name</th>
+            <th>Patient's DOB</th>
+            <th>Task</th>
+            <th>Actions</th>
+        </str>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.pt_name }}</td>
+                <td>{{ task.pt_DOB }}</td>
+                <td>{{ task.content }}</td>
+                <td>
+                    <a href="/delete/{{ task.id }}">Delete</a>
+                    <br>
+                    <a href="/update/{{ task.id }}">Update</a>
+                </td>
+
+
+        </tr>
+
+
+        {% endfor %}
+        
+    </table>
+    {% endif %}
+    <br>
+    <a href="/new_patient"> Add New Task </a>
+
+</div>
+{% endblock %}

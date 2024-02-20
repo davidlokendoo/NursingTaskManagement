@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Task Master</title>
+{% endblock %}
+
+{% block body %}
+<div class="form">
+    <h1>Add Task Below</h1>
+    <form action="/new_patient" method="POST">
+        <p>Patient's name
+        <input type="text" name= "pt_name" id="pt_name"></p>
+        <p>Patient's DOB
+        <input type="date" name="pt_dob" id="pt_dob"></p>
+        <p>Time Due
+        <input type="time" name="time_due" id="time_due"></p>
+        <p>Task
+        <input type="text" name="content" id="content"></p>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+   
+{% endblock %}

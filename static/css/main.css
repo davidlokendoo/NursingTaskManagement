@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.content {
+    text-align: center;
+}
+
+
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+.form {
+    text-align: center;
+}
