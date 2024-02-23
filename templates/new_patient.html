@@ -2,6 +2,7 @@
 
 {% block head %}
 <title>Task Master</title>
+<link rel="stylesheet" href = "{{  url_for('static', filename= 'css/taskform.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -12,11 +13,13 @@
         <input type="text" name= "pt_name" id="pt_name"></p>
         <p>Patient's DOB
         <input type="date" name="pt_dob" id="pt_dob"></p>
-        <p>Time Due
-        <input type="time" name="time_due" id="time_due"></p>
+        <p>Patient's Room No.
+        <input type="text" name="pt_room" id="pt_room"></p>
         <p>Task
         <input type="text" name="content" id="content"></p>
+        <p>Time Due
+        <input type="time" name="time_due" id="time_due"></p>
         <p><input type="submit" value="Submit"></p>
     </form>
-   
+</div>   
 {% endblock %}

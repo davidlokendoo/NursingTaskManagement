@@ -11,18 +11,27 @@
     <h4>There are no tasks!</h4>
 
     {% else %}
+    <a class="box-link" href="/filtered/1">Tasks due within 1 hour</a>
+    <a class="box-link" href="/filtered/3">Tasks due within 3 hours</a>
+    <a class="box-link" href="/filtered/5">Tasks due within 5 hours</a>
+
+
     <table>
         <str>
             <th>Patient's Name</th>
             <th>Patient's DOB</th>
+            <th>Patient's Room No.</th>
             <th>Task</th>
+            <th>Time Due</th>
             <th>Actions</th>
         </str>
         {% for task in tasks %}
             <tr>
                 <td>{{ task.pt_name }}</td>
                 <td>{{ task.pt_DOB }}</td>
+                <td>{{ task.pt_room }}</td>
                 <td>{{ task.content }}</td>
+                <td>{{ task.time_due }}</td>
                 <td>
                     <a href="/delete/{{ task.id }}">Delete</a>
                     <br>
@@ -38,7 +47,7 @@
     </table>
     {% endif %}
     <br>
-    <a href="/new_patient"> Add New Task </a>
+    <a href="/new_patient">+ Add New Task </a>
 
 </div>
 {% endblock %}
